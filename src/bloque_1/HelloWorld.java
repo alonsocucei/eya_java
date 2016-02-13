@@ -11,11 +11,14 @@ public class HelloWorld {
 
 /**
  * To check:
- * - Compile the program using javac.
  * - What's the syntax when using javac command?
- * - Run the program using java.
+ * - Compile the program using javac. (exercise)
  * - What's the syntax when using the java command?
+ * - Run the program using java. (exercise)
  * - What happens is file name is changed?.
  * - What happens if main method is changed?.
  * - What methods are used to print data to the console?
+ * - What happens if blocks order is changed? (exercise)
+ * - How many classes can be declared in a file?
+ * - What are the rules to name a file?
  */

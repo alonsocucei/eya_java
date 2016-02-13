@@ -19,5 +19,5 @@ public class Variables {
  * - What's engineering notation?
  * - How numbers are declared in base 2, 8 and 16?
  * - What's UNICODE?
- * - What's the default value for variables?
+ * - What's the default value for variables? (exercise)
  */
