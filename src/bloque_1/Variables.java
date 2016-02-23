@@ -4,8 +4,26 @@ package bloque_1;
  * @author alonsocucei
  */
 public class Variables {
+    int a;
+    
     public static void main(String[] args) {
-        
+        int decimal = 5;
+        int binario = 0b101;
+        int octal = 021;
+        int hexa = 0x11;
+        double cien = 1e2; //engineering notation
+        char c = 'a';
+        char unicode = '\u0040'; //using unicode
+        boolean b = true;
+        Object o = null;
+//        int 1abc; // compile error
+//        int ?abc; //compile error
+        System.out.println(decimal);
+        System.out.println(binario);
+        System.out.println(cien);
+        System.out.println(octal);
+        System.out.println(hexa);
+        System.out.println(unicode);
     }
 }
 

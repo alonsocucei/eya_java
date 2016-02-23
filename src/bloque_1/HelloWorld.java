@@ -1,13 +1,22 @@
 package bloque_1;
 
+//This line is automatically added by the compiler if it's not typed.
+import java.lang.*;
+
 /**
  * @author alonsocucei
  */
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello Java World!");
+        System.out.print("Hello Java World!");
+        System.out.printf("%s", "otra forma de imprimir");
+        System.err.println("Errores aqui");
     }
 }
+
+//A single file may have many class declarations, but only one can be public
+class Greeting{}
 
 /**
  * To check:
