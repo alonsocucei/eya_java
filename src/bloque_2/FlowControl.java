@@ -33,6 +33,8 @@ public class FlowControl {
             }
         }
         
+        // valid data types:
+        // byte, short, int, char, String
         switch(month) {
             case 1: case 3: case 5: case 7: case 8: case 10: case 12:
                 System.out.println("31 days");
@@ -51,7 +53,7 @@ public class FlowControl {
                 System.out.println("Not a valid month");
         }
         
-        int step = 0;
+        int step = 4;
         
         switch(step) {
             default:
@@ -59,7 +61,7 @@ public class FlowControl {
             case 1:
                 System.out.println("step 1");
             case 2:
-                System.out.println("step 2");
+                System.out.println("step 2");                
             case 3:
                 System.out.println("step 3");
             case 4:

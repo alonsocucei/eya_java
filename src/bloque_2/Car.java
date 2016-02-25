@@ -5,7 +5,15 @@ package bloque_2;
  * @author alonsocucei
  */
 public class Car {
+    String id;
+    String marca;
+    short modelo;
+    double precio;
     
+    public String toString() {
+        return "id: " + id + " marca: " + marca + " modelo: " + modelo + 
+                " precio:" + precio;
+    }
 }
 
 /**

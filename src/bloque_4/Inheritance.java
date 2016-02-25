@@ -6,12 +6,26 @@ package bloque_4;
 public class Inheritance {
     public static void main(String[] args) {
         A a = new A();
+        a.p = 5;
         B b = new B();
+        
+        System.out.println(a.p);
+        System.out.println(b.p);
     }
 }
 
-class A {private int a = 'a';}
-class B {}
+class A {
+    private int a = 'a';
+    public int p = 10;
+    int d = 5;
+    protected int pro = 7;
+}
+
+class B extends A {
+    public B() {
+        super.p += 6;
+    }
+}
 
 /**
  * To check:

@@ -5,16 +5,27 @@ package bloque_2;
  */
 public class LoopControl {
     public static void main(String[] args) {
-    
+        for (int i = 0; i < 10; i++) {
+            System.out.println("for: " + i);
+        }
+        
+        int i = 0;
+        while (i < 10) {
+            System.out.println("while: " + i++);
+//            if (i >= 6) break;
+        }
+        
+        i = 0;
+        do {
+            System.out.println("do while: " + i++);
+        } while (i < 10);
     }
 }
 
 /**
  * To check:
- * - loops: for, enhanced for, while and do while.
+ * - loops: for, while and do while.
  * - What condition expressions are valid?
- * - What are the differences between for and enhanced for?
- * - What can be passed to an enhanced for?
  * - Infinite loops.
  * - Which loop would be the best to print a menu? (exercise)
  * - Which loop would be the best to print arrays? (exercise)
