@@ -6,16 +6,32 @@ package bloque_4;
 public class Encapsulation {
     public static void main(String[] args) {
         Product vegetable = new Product();
-        vegetable.id = 1;
-        vegetable.name = "tomate rojo";
-        
-        vegetable.name = "jitomate rojo";
+        vegetable.setName("jitomate rojo");
+        vegetable.setName("tomate rojo");
+
+        System.out.println(vegetable.getName());
     }
 }
 
 class Product {
-    public int id;
-    public String name;
+    private int id;
+    private String name;
+    
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+    public int getId() {
+        return id;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public String getName() {
+        return name;
+    }
 }
 
 /**

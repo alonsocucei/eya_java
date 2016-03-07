@@ -5,7 +5,25 @@ package bloque_5;
  */
 public class RuntimeExceptions {
     public static void main(String[] args) {
+        int [] numbers = {1, 2, 3};
         
+        System.out.println(numbers[0]);
+//        System.out.println(numbers[3]);
+        
+        System.out.println(14/2);
+//        System.out.println(14/0);
+        
+        String name = "Alonso";
+        
+        System.out.println(name.toUpperCase());
+        name = null;
+//        System.out.println(name.toUpperCase());
+        
+        int positivo = -2;
+        
+        if (positivo < 0) {
+            throw new ArithmeticException("Negative numbers are not allowed.");
+        }
     }
 }
 

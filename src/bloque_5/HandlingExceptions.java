@@ -13,26 +13,34 @@ import java.util.NoSuchElementException;
  */
 public class HandlingExceptions {
     public static void main(String[] args) {
-        CandleStore store = new CandleStore();
+        CandyStore store = new CandyStore();
         
-        Candle candle = store.sellCandle();
+        Candy candy = store.sellCandy();
     }
 }
 
-class CandleStore {
-    ArrayList candles = new ArrayList();
+class CandyStore {
+    ArrayList candies = new ArrayList();
     
-    public void addCandle() {
-        candles.add(new Candle());
+    public void addCandy() {
+        candies.add(new Candy());
     }
     
-    public Candle sellCandle() throws NoSuchElementException {
-        return (Candle)candles.remove(0);
+    public Candy sellCandy() throws NoSuchElementException {
+        Candy c;
+        
+        try {
+            c = (Candy)candies.remove(0);
+        } catch (IndexOutOfBoundsException e) {
+            throw new NoSuchElementException("There isn't any candies at the store");
+        }
+        
+        return c;
     }
 }
 
-class Candle {
+class Candy {
     private String color = "white";
-    Candle(String color) {this.color = color;}
-    Candle() {}
+    Candy(String color) {this.color = color;}
+    Candy() {}
 }

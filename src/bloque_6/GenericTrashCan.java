@@ -15,10 +15,16 @@ public class GenericTrashCan<T> {
     }
     
     public static void main(String[] args) {
+        GenericTrashCan<Organic> organic = new GenericTrashCan<>();
+        GenericTrashCan<Inorganic> inorganic = new GenericTrashCan<>();
+        GenericTrashCan<Plastic> plastic = new GenericTrashCan<>();
         
+        organic.trash(new Organic());
+//        organic.trash(new Inorganic());
+//        organic.trash(new Plastic());
+        inorganic.trash(new Inorganic());
+//        inorganic.trash(new Organic());
+//        plastic.trash(new Organic());
+        plastic.trash(new Plastic());
     }
 }
-
-//class Organic implements Garbage {}
-//class Inorganic implements Garbage {}
-//class  Plastic implements Garbage{}

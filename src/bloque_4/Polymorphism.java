@@ -5,7 +5,15 @@ package bloque_4;
  */
 public class Polymorphism {
     public static void main(String[] args) {
-        Figure f;
+        Figure f = new Circle();
+        
+        drawFigure(f);
+        drawFigure(new Square());
+        drawFigure(new Circle());
+    }
+    
+    public static void drawFigure(Figure figure) {
+        figure.draw();
     }
 }
 
