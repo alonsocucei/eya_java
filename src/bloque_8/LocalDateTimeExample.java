@@ -17,16 +17,16 @@ public class LocalDateTimeExample {
         LocalDateTime courseStart;
         LocalDateTime courseEnd;
 
-        party = LocalDate.of(2014, MARCH, 21).atTime(13, 30);
-        System.out.println("Party is on: " + party);
-
-        LocalDate flightDate = LocalDate.of(2014, MARCH, 31);
-        LocalTime flightTime = LocalTime.of(21, 45);
-        tvProgram = LocalDateTime.of(flightDate, flightTime);
+        LocalDate tvProgramDate = LocalDate.of(2016, MARCH, 31);
+        LocalTime tvProgramTime = LocalTime.of(21, 45);
+        tvProgram = LocalDateTime.of(tvProgramDate, tvProgramTime);
         System.out.println("TV program starts at: " + tvProgram);
 
-        courseStart = LocalDateTime.of(2014, MARCH, 24, 9, 00);
-        courseEnd = courseStart.plusDays(4).plusHours(8);
+        party = LocalDate.of(2016, MARCH, 21).atTime(13, 30);
+        System.out.println("Party is on: " + party);
+        
+        courseStart = LocalDateTime.of(2016, MARCH, 28, 19, 00);
+        courseEnd = courseStart.plusDays(2).plusHours(2);
         System.out.println("Course starts: " + courseStart);
         System.out.println("Course ends:   " + courseEnd);
 

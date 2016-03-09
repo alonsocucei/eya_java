@@ -29,7 +29,7 @@ public class TestPathInfo {
             e.printStackTrace();
         }
         
-        for (Path name: infoPath) {
+        for (Path name: infoPath2) {
             System.out.println(name);
         }
     }
@@ -37,7 +37,7 @@ public class TestPathInfo {
 
 /**
  * To check:
- * - Does the Path values must be an existing file or folder?
+ * - Does the Path value must be an existing file or folder?
  * - What indexes are valid for getName() method?
  * - What indexes as valid for subpath() method?
  * - How a Path can be iterated to print all its names?

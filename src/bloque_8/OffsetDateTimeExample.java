@@ -12,9 +12,9 @@ public class OffsetDateTimeExample {
 
   public static void main(String[] args) {
     ZoneOffset mexicoCity = ZoneOffset.ofHours(-6);
-    ZoneOffset bangaloreCity = ZoneOffset.ofHours(11);
+    ZoneOffset bangaloreCity = ZoneOffset.ofHours(5);
     
-    LocalDateTime javaCourse = LocalDateTime.of(2016, Month.MARCH, 19, 15, 0);
+    LocalDateTime javaCourse = LocalDateTime.of(2016, Month.MARCH, 28, 19, 0);
     OffsetDateTime offsetJavaCourse =  OffsetDateTime.of(javaCourse, mexicoCity);
     
     OffsetDateTime offsetJavaCourseBangalore = offsetJavaCourse.withOffsetSameInstant(bangaloreCity);

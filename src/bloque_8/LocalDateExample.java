@@ -40,5 +40,4 @@ public class LocalDateExample {
  * To check:
  * - Do methods modify original object?
  * - How can we know a date in future?
- * 
  */
