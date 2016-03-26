@@ -8,15 +8,15 @@ public class SharedData {
     
     public static void main(String[] args) {
         Runnable runnable = () -> {
-            while (i < 50) {
+            while (i < 10) {
+                
+                try {
+                    Thread.sleep((int)(Math.random() * 1000));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                
                 System.out.printf("Thread: %s, i:%d\n", Thread.currentThread().getName(), i++);
-                
-//                try {
-//                    Thread.sleep((int)(Math.random() * 1000));
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-                
             }
         };
         

@@ -10,27 +10,27 @@ public class SynchronizedSharedData {
 
     private static int i;
     private static Set<Integer> numbers = new HashSet<>();
-    
+
     public static void main(String[] args) {
         Runnable runnable = () -> {
-            synchronized (Thread.currentThread()) {
+            synchronized (numbers) {
                 while (i < 100) {
-                    System.out.printf("Thread: %s, i:%d\n", Thread.currentThread().getName(), i++);
-                
+//                    System.out.printf("Thread: %s, i:%d\n", Thread.currentThread().getName(), i++);
+
 //                    try {
 //                        Thread.sleep((int) (Math.random() * 1000));
 //                    } catch (Exception e) {
 //                        e.printStackTrace();
 //                    }
 
-//                    numbers.add(i);
-//                    i ++;
+                    numbers.add(i);
+                    i ++;
                 }
             }
-            
-//            synchronized(numbers) {
-//                System.out.printf("total numbers: %d\n", numbers.size());
-//            }
+
+            synchronized(numbers) {
+                System.out.printf("total numbers: %d\n", numbers.size());
+            }
         };
 
         Thread t1 = new Thread(runnable, "t1");
@@ -44,6 +44,5 @@ public class SynchronizedSharedData {
 }
 
 /**
- * To check:
- *  -
+ * To check: -
  */

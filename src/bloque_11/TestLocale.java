@@ -8,8 +8,8 @@ import java.util.Locale;
 public class TestLocale {
     public static void main(String[] args) {
         Locale defaultLocale = Locale.getDefault();
-//        Locale customLocale = new Locale("en", "MX");
-//        defaultLocale = customLocale;
+        Locale customLocale = new Locale("en", "MX");
+        defaultLocale = customLocale;
         
         System.out.println(defaultLocale);
         System.out.printf("country: %s\n", defaultLocale.getCountry());

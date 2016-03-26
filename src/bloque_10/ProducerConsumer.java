@@ -29,11 +29,11 @@ class Producer implements Runnable {
         while(true) {
             char randomChar = (char) (Math.random() * ('z' - 'a') + 'a');
             
-//            synchronized(buffer) {
-//                buffer.notify();
+            synchronized(buffer) {
+                buffer.notify();
                 buffer.offer(randomChar);
                 System.out.printf("Producing element: %s\n", randomChar);
-//            }
+            }
             
             try {
                 Thread.sleep((int)(Math.random() * 1000));
@@ -52,18 +52,20 @@ class Consumer implements Runnable {
     
     public void run() {
         while(true) {
-//            synchronized(buffer) {
-//                if (buffer.size() == 0) {
-//                    try {
-//                        buffer.wait();
-//                    } catch (Exception e) {
-//                        e.printStackTrace();
-//                    }
-//                }
+            synchronized(buffer) {
+                if (buffer.size() == 0) {
+                    try {
+                        System.out.println("Waiting for elements");
+                        buffer.wait();
+                        System.out.println("Notified for elements");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
                 
                 char consumedChar = buffer.poll();
                 System.out.printf("Consuming element: %s\n", consumedChar);
-//            }
+            }
             
             try {
                 Thread.sleep((int)(Math.random() * 1000));

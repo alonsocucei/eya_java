@@ -8,7 +8,7 @@ import java.util.ResourceBundle;
  */
 public class TestBundle {
     public static void main(String[] args) {
-        Locale locale = Locale.getDefault();
+        Locale locale = new Locale("es", "MX");
         ResourceBundle bundle = ResourceBundle.getBundle("bloque_11.MyResources", locale);
         
         System.out.printf("saludo: %s\n", bundle.getString("helloKey"));

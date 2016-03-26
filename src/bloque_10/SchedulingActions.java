@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class SchedulingActions {
 
     public static void main(String[] args) {
-        ScheduledThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(1);
+        ScheduledThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(2);
         Runnable task1 = createRunnable("task 1", 3);
         Runnable task2 = createRunnable("task 2", 3);
         

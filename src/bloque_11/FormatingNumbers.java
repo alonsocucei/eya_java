@@ -13,8 +13,8 @@ public class FormatingNumbers {
         NumberFormat mxFormatter = NumberFormat.getCurrencyInstance(mxLocale);
         NumberFormat geFormatter = NumberFormat.getCurrencyInstance(geLocale);
         
-        System.out.printf("México: %s\n", mxFormatter.format(3000));
-        System.out.printf("Alemania: %s\n", geFormatter.format(3000));
+        System.out.printf("México: %s\n", mxFormatter.format(3000000));
+        System.out.printf("Alemania: %s\n", geFormatter.format(3000000));
     }
 }
 
